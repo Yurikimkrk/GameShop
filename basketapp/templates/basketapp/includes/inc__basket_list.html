@@ -1,0 +1,28 @@
+{% if basket %}
+    {% for item in basket %}
+        <div class="basket_record">
+            <img src="/media/{{ item.game.image }}" alt="{{ item.game.short_desc }}">
+            <span class="category_name">{{ item.game.category.name }}</span>
+            <span class="game_name">{{ item.game.name }}</span>
+            <span class="game_price">{{ item.game.price }}&nbspруб</span>
+            <input type="number" name="{{ item.pk }}" min="0" max="{{ item.game.quantity }}"
+                   value="{{ item.quantity }}">
+            <span class="game_cost">{{ item.game_cost }}&nbspруб</span>
+
+            <a href="{% url 'basket:delete_game' item.pk %}" class="btn btn-round">
+                удалить
+            </a>
+        </div>
+    {% endfor %}
+
+    <div class="basket_summary">
+        В корзине {{ basket.0.total_quantity }} товаров общей стоимостью
+        {{ basket.0.total_cost }} руб
+    </div>
+{% else %}
+    <h4>Корзина пуста</h4>
+{% endif %}
+
+<a href="{% url 'main:index' %}" class="btn btn-round">
+    на главную
+</a>

@@ -1,0 +1,33 @@
+{% extends 'mainapp/base.html' %}
+{% load static %}
+
+{% block container %}
+    <div class="slider">
+        {% include 'mainapp/includes/inc__main_menu.html' %}
+        <div class="button-slider">
+            <a href="#" class="button-order">купить<img src="{% static 'img/arrow.png' %}" alt=""></a>
+        </div>
+        <div class="navi">
+            <a href="#"></a><a href="#"></a><a href="#"></a>
+        </div>
+    </div>
+
+    <div class="featured">
+        <div class="clearfix">
+        </div>
+        <div class="tab-content">
+            {% for game in pop_games %}
+                <div class="block">
+                    <a href="#"><img src="{% static game.pictures %}" alt="" class="mini-img">
+                        <div class="text">
+                            <img src="{% static 'img/icon-hover.png' %}" alt="img">
+                            <h4>{{ game.name }}</h4>
+                            <p>{{ game.descript }}</p>
+                        </div>
+                    </a>
+                </div>
+            {% endfor %}
+        </div>
+        <a class="explore" href="/games/">Переход в раздел покупки игр<img src="{% static 'img/arrow.png' %}" alt=""></a>
+    </div>
+{% endblock %}

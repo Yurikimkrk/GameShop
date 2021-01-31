@@ -1,0 +1,67 @@
+<div class="clearfix">
+    <ul class="menu">
+        <li>
+            <a href="{% url 'main:index' %}" class="active">
+                главная
+            </a>
+        </li>
+        <li>
+            <a href="{% url 'main:games' %}">
+                игры
+            </a>
+        </li>
+        <li>
+            <a href="{% url 'main:points' %}">
+                точки самовывоза
+            </a>
+        </li>
+        {% if user.is_authenticated %}
+            <li>
+                <div class="dropdown">
+                    <a class="dropdown-toggle" href="" data-toggle="dropdown">
+                        {{ user.first_name|default:'пользователь'|title }}
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="{% url 'auth:update' %}">
+                                профиль
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{% url 'ordersapp:index' %}">
+                                заказы
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+        {% endif %}
+        {% if user.is_superuser %}
+            <li>
+                <a href="{% url 'my_admin:index' %}">
+                    админка
+                </a>
+            </li>
+        {% endif %}
+        <li>
+            {% if user.is_authenticated %}
+                <a href="{% url 'auth:logout' %}">
+                    выход
+                </a>
+            {% else %}
+                <a href="{% url 'auth:login' %}">
+                    вход
+                </a>
+            {% endif %}
+        </li>
+    </ul>
+    <a href="#" class="search"></a>
+    <a href="{% url 'basket:index' %}" class="basket">
+    <span>
+        {% if basket %}
+            {{ basket.0.total_cost|floatformat:0 }} руб ({{ basket.0.total_quantity }} шт)
+        {% endif %}
+    </span>
+    </a>
+</div>

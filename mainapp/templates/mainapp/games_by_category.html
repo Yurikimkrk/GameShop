@@ -1,0 +1,52 @@
+{% extends 'mainapp/base.html' %}
+{% load static %}
+
+{% block container %}
+    <div class="white">
+        {% include 'mainapp/includes/inc__main_menu.html' %}
+    </div>
+
+    <div class="details">
+        {% include 'mainapp/includes/inc__genres_menu.html' %}
+
+        <div class="related">
+            <div class="undmenu clearfix">
+                <h2>Игры в категории {{ category.name|title }}</h2>
+            </div>
+            <div class="paginator">
+                <a href="{% url 'main:games_by_category_pagination' category.pk 1 %}">
+                    <<
+                </a>
+                {% if all_games.has_previous %}
+                    <a href="{% url 'main:games_by_category_pagination' category.pk all_games.previous_page_number %}">
+                        &ensp;<&ensp;
+                    </a>
+                {% endif %}
+                <span class="current">страница {{ all_games.number }} из {{ all_games.paginator.num_pages }}</span>
+                {% if all_games.has_next %}
+                    <a href="{% url 'main:games_by_category_pagination' category.pk all_games.next_page_number %}">
+                        &ensp;>&ensp;
+                    </a>
+                <a href="{% url 'main:games_by_category_pagination' category.pk all_games.paginator.num_pages %}">
+                    >>
+                </a>
+                {% endif %}
+            </div>
+            <br>
+            <div class="related-games clearfix">
+                {% for game in all_games %}
+                    <div class="block">
+                        <a href="{% url 'mainapp:game' game.pk %}">
+                            <img src="/media/{{ game.image }}" alt="">
+                            <div class="text">
+                                <img src="{% static 'img/icon-hover.png' %}" alt="img">
+                                <h4>{{ game.name }}</h4>
+                                <p>{{ game.short_desc }}</p>
+                            </div>
+                        </a>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endblock %}

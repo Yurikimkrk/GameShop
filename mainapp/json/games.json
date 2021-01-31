@@ -1,0 +1,83 @@
+[
+    {
+        "category": "action",
+        "name": "Assasin's Creed",
+        "image": "games_images/acreed.jpeg",
+        "short_desc": "Action в мире викингов",
+        "descript": "Вам предстоит пройти путь к славе, сыграв за легендарного викинга. Нападайте на врагов, развив айте селение и усиливайте влияние.",
+        "price": "1659.99",
+        "quantity": "17"
+    },
+    {
+        "category": "strategy",
+        "name": "Heroes of M&M 7",
+        "image": "games_images/heroes7.jpg",
+        "short_desc": "Легендарная пошаговая стратегия",
+        "descript": "Меч и Магия® Герои® VII – триумфальное возвращение знаменитой серии пошаговых стратегий.",
+        "price": "2599.99",
+        "quantity": "21"
+    },
+    {
+        "category": "action",
+        "name": "Division 2",
+        "image": "games_images/division2.jpg",
+        "short_desc": "Знаменитый Action про отряд Division",
+        "descript": "Семь месяцев прошло с тех пор, как смертельно опасный вирус поразил весь мир. Члены отряда Division неустанно защищают то, что можно спасти.",
+        "price": "999.99",
+        "quantity": "7"
+    },
+    {
+        "category": "shooter",
+        "name": "FarCry 5",
+        "image": "games_images/farcry.jpg",
+        "short_desc": "Разожгите огонь сопротивления",
+        "descript": "Дайте отпор Иосифу Сиду и его сторонникам. Разожгите огонь сопротивления.",
+        "price": "599.99",
+        "quantity": "27"
+    },
+    {
+        "category": "shooter",
+        "name": "Ghost Recon",
+        "image": "games_images/ghostrecon.jpg",
+        "short_desc": "Военный шутер",
+        "descript": "Ghost Recon Breakpoint – военный шутер с завораживающе красивым открытым миром",
+        "price": "1259.99",
+        "quantity": "9"
+    },
+    {
+        "category": "strategy",
+        "name": "Anno 1800",
+        "image": "games_images/anno1800.jpg",
+        "short_desc": "Возглавьте промышленную революцию!",
+        "descript": "Вы окажетесь на заре индустриальной эпохи. Путь, который вы выберете, определит облик всего мира. Станете ли вы изобретателем или эксплуататором? Завоевателем или освободителем Только от вас зависит, какой след вы оставите в истории.",
+        "price": "1949.99",
+        "quantity": "18"
+    },
+    {
+        "category": "action",
+        "name": "Watch Dogs 2",
+        "image": "games_images/whatchdogs2.jpg",
+        "short_desc": "Используйте взлом как оружие в огромном открытом мире",
+        "descript": "Талантливый хакер Маркус объединяется с хакерской группой DedSec, чтобы противостоять системе глобального контроля ctOS 2.0, которую криминал использует, чтобы отслеживать и манипулировать жизнью горожан.",
+        "price": "599.99",
+        "quantity": "12"
+    },
+    {
+        "category": "strategy",
+        "name": "The Settlers",
+        "image": "games_images/settlers_6D3pujJ.jpg",
+        "short_desc": "Легендарная стратегия",
+        "descript": "Свежий взгляд на легендарную стратегию и новые особенности от ее создателя Волькера Вертича.",
+        "price": "399.99",
+        "quantity": "25"
+    },
+    {
+        "category": "shooter",
+        "name": "Rainbow six Siege",
+        "image": "games_images/RS6.jpg",
+        "short_desc": "PvP шутер от Тома Клэнси",
+        "descript": "Соберите свою команду из оперативников с особыми устройствами и приведите ее к победе в бою 5х5",
+        "price": "759.99",
+        "quantity": "18"
+    }
+]

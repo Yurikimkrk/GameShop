@@ -1,0 +1,53 @@
+{% extends 'mainapp/base.html' %}
+{% load static %}
+
+{% block container %}
+    <div class="white">
+        {% include 'mainapp/includes/inc__main_menu.html' %}
+    </div>
+
+    <div class="details">
+        {% include 'mainapp/includes/inc__genres_menu.html' %}
+
+        <div class="details-games">
+            <div class="details-slider">
+                <div class="slider-game">
+                    <img src="/media/{{ new_game.image }}" class="slider-game" alt="">
+                </div>
+            </div>
+
+            <div class="description">
+                <h3 class="big-bold">{{ new_game.name }}</h3>
+                <h3 class="red">новинка</h3>
+                <p class="price"> {{ new_game.price }} <span>руб</span></p>
+                <a href="{% url 'basket:add_game' new_game.pk %}" class="red-button">
+                    купить <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                </a>
+                <div class="description-text">
+                    <p>
+                        {{ new_game.descript }}
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="related">
+            <h1>Все игры</h1>
+            <div class="related-games clearfix">
+                {% for game in all_games %}
+                    <div class="block">
+                        <a href="{% url 'mainapp:game' game.pk %}"><img src="/media/{{ game.image }}" alt="">
+                            <div class="text">
+                                <img src="{% static 'img/icon-hover.png' %}" alt="img">
+                                <h4>{{ game.name }}</h4>
+                                <p>
+                                    {{ game.short_desc }}
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endblock %}

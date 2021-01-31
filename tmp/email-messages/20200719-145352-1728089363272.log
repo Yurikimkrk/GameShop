@@ -1,0 +1,14 @@
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 8bit
+Subject: 
+ =?utf-8?b?0J/QvtC00YLQstC10YDQttC00LXQvdC40LUg0YPRh9C10YLQvdC+0Lkg0LfQsNC/?=
+ =?utf-8?b?0LjRgdC4IEdH?=
+From: django@geekshop.local
+To: 4kreon@mail.ru
+Date: Sun, 19 Jul 2020 07:53:52 -0000
+Message-ID: <159514523212.4768.18020674778008376376@Yuri>
+
+Для подтверждения учетной записи GG на портале http://localhost:8000 перейдите по ссылке: 
+http://localhost:8000/auth/verify/4kreon@mail.ru/1999f391d27e9f0e01cd12f3be71460c5fef78d5/
+-------------------------------------------------------------------------------
